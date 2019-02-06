@@ -1,7 +1,7 @@
 # Meituri Album Downloader
 
 **Not safe for work (NSFW)**.  
-A command line script that lets you download albums with given IDs from meituri.com. You need the album ID and the number of photos in an album to start downloading the images.
+A command line script that lets you download albums with given IDs from [meituri.com](meituri.com). You need the album ID and the number of photos in an album to start downloading the images.
 
 ## How to
 
@@ -10,7 +10,7 @@ Usage in command line:
 `meituri.py album_id num_of_pics`
 
 ### Example:
-`meituri_downloader.py 14449 55`
+`meituri.py 14449 55`
 
 ![](screenshot_site.png)
 
