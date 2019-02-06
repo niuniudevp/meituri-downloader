@@ -1,4 +1,4 @@
-# Meituri Album Downloader
+# :ribbon: Meituri Album Downloader
 
 **Not safe for work (NSFW)**.  
 A command line script that lets you download albums with given IDs from [meituri.com](https://www.meituri.com/).  
