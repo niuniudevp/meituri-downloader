@@ -12,9 +12,9 @@ Usage in command line:
 ### Example:
 `meituri.py 14449 55`
 
-![](screenshot_site.png)
+![](extras/screenshot_site.png)
 
-![](screenshot_cmd.png)
+![](extras/screenshot_cmd.png)
 ### Explanation:
 Attempts to download the album with the ID of 14449 that has 55 pictures in it.  
 URL of the example: https://www.meituri.com/a/14449/
