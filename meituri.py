@@ -2,9 +2,9 @@ import sys
 import os
 import urllib.request
 import time
+import click
 
 STRS = {
-	"err_args": "2 arguments are needed. Example:\nmeituri_downloader.py TODO:",
 	"down": "Downloading %s.",
 	"comp": "Complete. Took %.2f seconds.",
 	"all_comp": "---\nDownloading %d images took %.2f seconds to complete.",
@@ -14,15 +14,20 @@ URL = "http://ii.hywly.com/a/1/{}/{}.jpg"
 def strings(s):
 	return STRS.get(s)
 
-def start():
-	if len(sys.argv) == 3:
-		album = int(sys.argv[1])
-		number = int(sys.argv[2])
-		out = []
-	else:
-		print(strings('err_args'))
-		return
-	
+# Adds -h in addition to the default --help
+CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
+@click.command(context_settings=CONTEXT_SETTINGS)
+@click.option('-a', '--album', type=int,
+	prompt='Enter the album id',
+	help='Album ID located in the URL: https://www.meituri.com/a/$ID')
+@click.option('-n', '--number', type=int,
+	prompt='Enter the number of images',
+	help='Number of pictures on top of the page followed by P.')
+# couldn't figure out to also optionally add arguments below
+# @click.argument('album', type=int, required=False)
+# @click.argument('number', type=int, required=False)
+def start(album, number):
+	out = []
 	path = f'albums/hywly-{album}/'
 	try:
 		if not os.path.exists(path):
