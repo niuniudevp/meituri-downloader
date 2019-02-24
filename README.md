@@ -4,6 +4,8 @@
 A command line script that lets you download albums with given IDs from [meituri.com](https://www.meituri.com/).  
 The album ID and the number of photos in the album are needed inputs to start downloading the images.
 
+**(24th February of 2019) Notice:** I'm getting `an existing connection was forcibly closed by the remote host` error or it just hangs still (can't even CTRL + C) after 5-6 images. Maybe it's just me.
+
 ## How to
 
 Usage in command line:
