@@ -10,10 +10,10 @@ The album ID and the number of photos in the album are needed inputs to start do
 
 Usage in command line:
 
-`python meituri.py album_id num_of_pics`
+`python meituri.py -a album_id -n num_of_pics`
 
 ### Example:
-`python meituri.py 14449 55`
+`python meituri.py -a 14449 -n 55`
 
 ![](extras/screenshot_site.png)
 
